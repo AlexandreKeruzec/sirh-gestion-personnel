@@ -1,4 +1,5 @@
 <%@page import="java.util.List"%>
+<%@page import="dev.sgp.entite.Collaborateur" %>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <html>
 <head>
@@ -70,8 +71,9 @@
 
 <div class="container">
   <div class="row">
-<% List<String> listeNoms =(List<String>)request.getAttribute("listeNoms");
-for (String nom : listeNoms) {
+<% List<Collaborateur> listeCollabs =(List<Collaborateur>)request.getAttribute("listeCollabs");
+for (Collaborateur collab : listeCollabs) {
+	String nom = collab.getNom();
 
 %>
 	<div class="col-lg-4 col-md-6 col-sm-12 mt-3">
@@ -102,147 +104,3 @@ for (String nom : listeNoms) {
 %>
 </div>
 </div>
-<!--
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-      <div class="container">
-        <div class="row border">NOM Prénom</div>
-        <div class="row border">
-          <div class="col-4 p-1"><img src="res/avatar_defaut.png" alt=""/></div>
-          <div class="col-4">
-            <div class="row">Fonction</div>
-            <div class="row">Département</div>
-            <div class="row">Email</div>
-            <div class="row">Téléphone</div>
-          </div>
-          <div class="col-3">
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">
-              <button type="button" name="button" class="float-right">Editer</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-      <div class="container">
-        <div class="row border">NOM Prénom</div>
-        <div class="row border">
-          <div class="col-4 p-1"><img src="res/avatar_defaut.png" alt="" style="max-width:120px;"/></div>
-          <div class="col-4">
-            <div class="row">Fonction</div>
-            <div class="row">Département</div>
-            <div class="row">Email</div>
-            <div class="row">Téléphone</div>
-          </div>
-          <div class="col-3">
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">
-              <button type="button" name="button" class="float-right">Editer</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-      <div class="container">
-        <div class="row border">NOM Prénom</div>
-        <div class="row border">
-          <div class="col-4 p-1"><img src="res/avatar_defaut.png" alt=""/></div>
-          <div class="col-4">
-            <div class="row">Fonction</div>
-            <div class="row">Département</div>
-            <div class="row">Email</div>
-            <div class="row">Téléphone</div>
-          </div>
-          <div class="col-3">
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">
-              <button type="button" name="button" class="float-right">Editer</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-      <div class="container">
-        <div class="row border">NOM Prénom</div>
-        <div class="row border">
-          <div class="col-4 p-1"><img src="res/avatar_defaut.png" alt=""/></div>
-          <div class="col-4">
-            <div class="row">Fonction</div>
-            <div class="row">Département</div>
-            <div class="row">Email</div>
-            <div class="row">Téléphone</div>
-          </div>
-          <div class="col-3">
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">
-              <button type="button" name="button" class="float-right">Editer</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-      <div class="container">
-        <div class="row border">NOM Prénom</div>
-        <div class="row border">
-          <div class="col-4 p-1"><img src="res/avatar_defaut.png" alt=""/></div>
-          <div class="col-4">
-            <div class="row">Fonction</div>
-            <div class="row">Département</div>
-            <div class="row">Email</div>
-            <div class="row">Téléphone</div>
-          </div>
-          <div class="col-3">
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">
-              <button type="button" name="button" class="float-right">Editer</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
-      <div class="container">
-        <div class="row border">NOM Prénom</div>
-        <div class="row border">
-          <div class="col-4 p-1"><img src="res/avatar_defaut.png" alt=""/></div>
-          <div class="col-4">
-            <div class="row">Fonction</div>
-            <div class="row">Département</div>
-            <div class="row">Email</div>
-            <div class="row">Téléphone</div>
-          </div>
-          <div class="col-3">
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">blablabla</div>
-            <div class="row">
-              <button type="button" name="button" class="float-right">Editer</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
--->

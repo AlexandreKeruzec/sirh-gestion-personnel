@@ -1,3 +1,5 @@
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
   <title>SGP App</title>
@@ -23,7 +25,7 @@
         <a class="nav-link" href="#">Statistiques</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Activités</a>
+        <a class="nav-link" href="#">ActivitÃ©s</a>
       </li>
     </ul>
   </div>
@@ -51,7 +53,7 @@
           </textarea></div>
         </div>
         <div class="row m-2">
-          <div class="col-4"><label for="ssn">Numéro de sécurité sociale</label></div>
+          <div class="col-4"><label for="ssn">NumÃ©ro de sÃ©curitÃ© sociale</label></div>
           <div class="col-8"><input type="text" id="ssn" class="form-control" required="true" minlength="15" maxlength="15"></div>
         </div>
         <div class="row m-2">
